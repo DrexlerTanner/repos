@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<body>
+    <h1 style="font-family:'Times New Roman'; font-size:xx-large"  >MLS Standings</h1>
+    @Html.Raw((String)ViewBag.Output)
+</body>
+
+<footer>
+
+</footer>
+<style>
+
+
+     table {
+         font-family: arial, sans-serif;
+         border-collapse: collapse;
+         width: 100%;
+     }
+
+     th {
+         border: 0px solid #dddddd;
+         text-align: left;
+         padding: 8px;
+         background-color: #ffebff;
+     }
+
+     td {
+         border: 0px solid #dddddd;
+         text-align: left;
+         padding: 8px;
+     }
+
+     tr:nth-child(even) {
+         background-color: #ebfff5;
+     }
+
+     tr:nth-child(odd) {
+         background-color: #ffebeb;
+     }
+
+     body {
+         background-image: url(https://www.susaacademy.com/wp-content/uploads/2017/03/soccer-field.png);
+         text-align: center;
+         font-family: 'Times New Roman';
+         font-weight: 200;
+     }
+
+    footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        background-color: #efefef;
+        text-align: center;
+        background: none;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    headline{
+        font-size: larger;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+</style>

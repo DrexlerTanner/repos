@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<body>
+    <div>
+        @ViewBag.Greeting Vietnam
+        @Html.Raw((String)ViewBag.Output)
+
+        @Html.ActionLink("RSVP Now", "RsvpForm")
+    </div>
+</body>

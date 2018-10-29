@@ -1,0 +1,35 @@
+﻿@model ModelFund.Models.GuestResponse
+
+@{
+    ViewBag.Title = "RsvpForm";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                <p>Name: @Html.TextBoxFor(x => x.Name)</p>
+                <p>Email: @Html.TextBoxFor(x => x.Email)</p>
+                <p>Phone: @Html.TextBoxFor(x => x.Phone)</p>
+                <p>
+                    Will you attend? @Html.DropDownListFor(x => x.WillAttend, new[] {
+              new SelectListItem()
+              {Text = "Yes, I will be there", Value = bool.TrueString},
+              new SelectListItem()
+              {Text = "Nope", Value = bool.FalseString} }, "Choose an option")
+                </p>
+                <input type="submit" value="Submit RSVP" />
+            }
+        </div>
+    </div>
+</body>
